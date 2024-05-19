@@ -143,10 +143,10 @@ endif()
 
 target_compile_options(${PROJECT_NAME}
   PUBLIC
-    $<$<CXX_COMPILER_ID:MSVC>:$<$<CONFIG:Debug>:/MTd>>
-    $<$<CXX_COMPILER_ID:MSVC>:$<$<CONFIG:MinSizeRel>:/MT>>
-    $<$<CXX_COMPILER_ID:MSVC>:$<$<CONFIG:Release>:/MT>>
-    $<$<CXX_COMPILER_ID:MSVC>:$<$<CONFIG:RelWithDebInfo>:/MTd>>
+    $<$<CXX_COMPILER_ID:MSVC>:$<$<CONFIG:Debug>:/MDd>>
+    $<$<CXX_COMPILER_ID:MSVC>:$<$<CONFIG:MinSizeRel>:/MD>>
+    $<$<CXX_COMPILER_ID:MSVC>:$<$<CONFIG:Release>:/MD>>
+    $<$<CXX_COMPILER_ID:MSVC>:$<$<CONFIG:RelWithDebInfo>:/MDd>>
 )
 
 if(MSVC)
